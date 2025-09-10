@@ -1,0 +1,104 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /api
+  max-http-request-header-size: 1200KB
+
+spring:
+  application:
+    name: "Anbu-Batch-Server"
+  config:
+    activate:
+      on-profile: dev
+    additional-location: Common
+  devtools:
+    livereLoad:
+      enabled: true
+    restart:
+      enabled: false
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      enabled: true
+#      location: /Users/bk/work/app
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+  output.ansi.enabled: always
+
+springdoc:
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  api-docs:
+    groups:
+      enabled: true
+    path: /api-docs
+    enabled: true
+  cache:
+    disabled: true # swagger cache 설정
+  swagger-ui:
+    config-url: /api/api-docs/swagger-config
+    url:  /api/api-docs
+    operations-sorter: method # alpha(알파벳 오름차순), method(HTTP메소드순)
+    tags-sorter: alpha # 태그 정렬 기준
+    path: /swagger-ui.html # html 문서 접속 경로
+    disable-swagger-default-url: true
+    #   display-query-params-without-oauth2: true
+    doc-expansion: none # tag, operation 펼치는 방식 ["list", "full", "none"]
+    display-request-duration: true
+    persist-authorization: true
+    syntax-highlight:
+      theme: "obsidian" # "arta">회/노 "obsidian">흰/주
+  paths-to-match:   # OpenAPI 3 로 문서화할 api path 리스트
+    - /**
+#  packages-to-scan: com.bankle.app , com.bankle.common.ctrl, com.bankle.common.comBiz.kcb.ctrl
+  packages-to-scan: com.bankle.batch , com.bankle.common.ctrl, com.bankle.common.comBiz
+  show-actuator: true
+
+
+logging:
+  file:
+      name: /data/work/batch/log/batch.log
+  level:
+    p6spy: INFO
+    com:
+      nicekos: DEBUG
+      hikari : TRACE
+      HikariConfig : DEBUG
+    web: INFO
+    jdbc:
+      resultset: ERROR
+      audit: OFF
+      resultsettable: INFO
+      sqltiming: OFF
+      sqlonly: OFF
+      sql: ERROR
+      connection: ERROR
+    org:
+      zalando:
+        logbook: TRACE
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor :
+            sql :
+              BasicBinder : trace
+    com.zaxxer.hikari.pool.HikariPool: debug
+
+#p6spy query logging
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: true
+
+popbill:
+  linkId: KOREAESCROW
+  secretKey: pxw7K2ws2QaVfv3HWhLyKzl6oHYvfGjP8ixRIFu2Kzg=
+  isTest: true
+  isIpRestrictOnOff: true
+  useStaticIp: false
+  useLocalTimeYn: true
+
+bankclear:
+  bizNo: 5378702438

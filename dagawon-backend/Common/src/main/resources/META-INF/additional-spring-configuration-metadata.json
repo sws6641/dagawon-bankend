@@ -1,0 +1,23 @@
+{
+  "properties": [
+    {
+      "name": "app.auth.token-secret",
+      "type": "java.lang.String",
+      "description": "Description for app.auth.token-secret."
+    },
+    {
+      "name": "custom.property.sample",
+      "type": "java.lang.String",
+      "description": "Description for custom.property.sample."
+    },
+    {
+      "name": "custom.bankle.save-transfer-to-db",
+      "type": "java.lang.String",
+      "description": "Description for custom.bankle.save-transfer-to-db."
+    },
+    {
+      "name": "direct.send.sender",
+      "type": "java.lang.String",
+      "description": "Description for direct.send.sender."
+    }
+  ] }

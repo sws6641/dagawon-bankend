@@ -1,0 +1,138 @@
+app:
+  auth:
+    token-secret: asiudhfnlkjqwengoiuasdbvikjashdfiowqeujbnkjashdfnklwajqebriajsbvkjsabvAESFhuiwqapenfjkasd
+spring:
+  application:
+    name: "Common Module"
+  config:
+    activate:
+      on-profile: dev
+  jpa:
+    database: mysql
+    generate-ddl: false
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        use_sql_comments: true
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://115.68.51.104:3306/anbu?useUnicode=true&characterEncoding=utf-8&serverTimeZone=Asia/Seoul&useSSL=false
+    hikari:
+      username: anbudbuser
+      password: dksqnelqldbwj
+      connection-test-query: SELECT 1
+      auto-commit: false
+      minimum-idle: 50
+      maximum-pool-size: 50
+      transaction-isolation: TRANSACTION_READ_UNCOMMITTED
+      connection-timeout: 5000
+      validation-timeout: 2000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  main:
+    allow-bean-definition-overriding: true
+
+custom:
+  property:
+    sample: SAMPLE
+  bankle:
+    save-transfer-to-db: true
+
+kcb:
+  kcb_cp_cd: V55590000000
+  kcb_site_name: (주)뱅크클리어
+  kcb_site_url: https://anbuapp.com/api
+  kcb_pop_url: https://safe.ok-name.co.kr/CommonSvl
+  kcb_target: PROD
+  kcb_license: /data/kcb_license/V55590000000_IDS_01_PROD_AES_license.dat
+
+toss:
+  clientKey: test_ck_dP9BRQmyarYX1ymP1vvVJ07KzLNk
+  secretKey: test_sk_LBa5PzR0Arnb2XvmwJkrvmYnNeDM
+  customerKey: anbu1i46zd
+
+message:
+  push:
+    api_key: AAAAOs5IRRc:APA91bGrmlhNrB-AudTkvSM8z2tJkILijJlUm8JNVkaKhWUl0SIYlXr0XW2efpliFcvCYvtxS-ChCKMjooSLaza4u7OMRceuRjSQU9pbam2jed6Cwf0PMoIVTPRUv-jpGZ2GmUub7x1U
+  sms:
+    secret_key: pxw7K2ws2QaVfv3HWhLyKzl6oHYvfGjP8ixRIFu2Kzg
+  kakao:
+    corp_num: 5378702438
+    user_id: BANKCLEAR
+    link_id: KOREAESCROW
+    secret_key: pxw7K2ws2QaVfv3HWhLyKzl6oHYvfGjP8ixRIFu2Kzg=
+    is_test: true
+    is_ip_restrict_on_off: true
+
+#coocon.net
+coocon:
+  url: https://dev2.coocon.co.kr:8443/sol/gateway/acctnm_rcms_wapi.jsp
+  key: 1kv2ZjYztX6wWyy6XiMf
+
+anbu:
+  url:
+    app: https://anbuapp.com/api
+    admin: https://anbuadmin.com/api
+    batch: https://anbubatch.com/api
+
+
+#등기부등본사건조회
+infotech:
+  apikey: 755a1e84-d39e-4a9f-8368-1df812ed12a9
+  url: https://apigw.infotech.co.kr/api/service
+  ip: 203.240.80.50
+  payNo: L24350045214
+  payPw: 2020@@
+  userId1: makepg
+  userId2: cokosone
+  userId3: cokos1
+  userId4: l9927
+  userId5: irambo
+  userId6: woals804
+  userId7: arakoh23
+  userId8: wndmssl
+  userId9: hyemiuu
+  userId10: llllja
+  userPw1: pass1@@2
+  userPw2: coco2020@@
+  userPw3: coco2020@@
+  userPw4: Dltkdguq1@
+  userPw5: wind002@!@
+  userPw6: rkawk0728*
+  userPw7: a20230320!
+  userPw8: akfn1212!
+  userPw9: hyemi00!
+  userPw10: wjddk22!!
+
+
+data:
+  files:
+    cust: /data/files/cust
+    biz: /data/files/biz
+    agreement: /data/files/agreement
+
+
+
+tiff:
+  secret:
+    key: jmlim12345bbbbbaaaaa123456789066
+
+#kakao_cert
+kakaocert:
+  #링크허브에서 발급받은 파트너 링크아이디.
+  linkId:  BANKCLEAR_BC
+  #링크허브에서 발급받는 비밀키.
+  secretKey: l9CgOJvNpNgLFcrFjvptJwEFM9owvtcdHZD8dHGueiE=
+  #이용기관코드, 파트너가 등록한 이용기관의 코드, (파트너 사이트에서 확인가능)
+  clientCode: "024060000024"
+  #인증토큰 발급 IP 제한 On/Off, ture-제한기능 사용(기본값-권장),  false-제한기능 미사용
+  isIPRestrictOnOff: true
+  #카카오써트 API 서비스 고정 IP 사용여부, true-사용, false-미사용, 기본값(false)
+  useStaticIP: false
