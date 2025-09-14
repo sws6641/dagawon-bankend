@@ -5,31 +5,31 @@ DaGaWon 개발 서버 정보
 
 도메인  anbuapp.com
 
-web 115.68.51.110 port : 22
-was  115.68.51.102 port : 22
-db   115.68.51.104 port : 22
+web
+was
+db
 
-서버접속ID anbu
-서버접속pw dksqn
+서버접속ID
+서버접속pw
 ```
 
 ## DB 접속 정보
 
 ```Text
-Host: 115.68.51.104
-Port: 3306
-ID: anbudbuser
-PW: dksqnelqldbwj
-DB: anbu
+Host: 
+Port: 
+ID: 
+PW: 
+DB: 
 ```
 
 ## 서버 포트
 
 | Server Name | PORT |
 |-------------|------|
-| anbu-app    | 8082 |
-| anbu-admin  | 8083 |
-| anbu-batch  | 8084 |
+| DaGaWon-app    |  |
+| DaGaWon-admin  |  |
+| DaGaWon-batch  |  |
 
 ## 맥에서 포트 확인후 포트 강제 종료
 
