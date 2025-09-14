@@ -3,7 +3,7 @@
 ```Text
 DaGaWon 개발 서버 정보
 
-도메인  anbuapp.com
+도메인
 
 web
 was
