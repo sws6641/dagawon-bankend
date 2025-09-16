@@ -1,7 +1,6 @@
 # DaGaWon-ROOT PROJECT
-
+## 서버 정보
 ```Text
-DaGaWon 개발 서버 정보
 
 도메인
 
